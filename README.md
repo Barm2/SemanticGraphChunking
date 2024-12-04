@@ -29,6 +29,7 @@ Clone this repository and install the required dependencies:
 git clone <repository_url>
 cd <repository_name>
 pip install -r requirements.txt
+```
 
 ## Running the Project
 
@@ -60,3 +61,5 @@ pip install -r requirements.txt
 2. Run the script using the following command:
    ```bash
    python semantic_graph_chunker.py
+   ```
+
