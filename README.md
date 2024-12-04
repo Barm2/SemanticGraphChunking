@@ -2,6 +2,7 @@
 
 Semantic Graph Chunking is an innovative chunking method designed to improve document processing in Retrieval-Augmented Generation (RAG) pipelines. By leveraging graph-based approaches, this method creates semantically coherent chunks, enhancing the efficiency and accuracy of information retrieval and downstream tasks.
 
+
 ## Overview
 
 This repository implements the Semantic Graph Chunking method. The process includes:
@@ -13,6 +14,7 @@ This repository implements the Semantic Graph Chunking method. The process inclu
 5. Generating coherent text chunks from the identified communities.
 
 This method is particularly useful in scenarios where semantic coherence is critical for document segmentation and retrieval.
+
 
 ## Requirements
 
