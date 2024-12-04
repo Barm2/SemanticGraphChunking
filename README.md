@@ -29,3 +29,34 @@ Clone this repository and install the required dependencies:
 git clone <repository_url>
 cd <repository_name>
 pip install -r requirements.txt
+
+## Running the Project
+
+### Environment Setup
+
+1. **Set up API keys**:
+   - Obtain your API keys from [Cohere](https://cohere.ai) and [Pinecone](https://www.pinecone.io).
+
+2. **Prepare the ground truth file**:
+   - Ensure the `ground_truth.xlsx` file is available in the repository or provide its absolute path.
+
+3. **Configure environment variables**:
+   - Define the following variables in your script or notebook:
+     ```python
+     COHERE_API_KEY = "your-cohere-api-key"
+     PINECONE_API_KEY = "your-pinecone-api-key"
+     GROUND_TRUTH_PATH = "/path/to/ground_truth.xlsx"
+     ```
+
+### Execution
+
+#### Option 1: Using the Jupyter Notebook
+1. Open the `execute_evaluation.ipynb` file in your preferred Jupyter environment.
+2. Update the environment variables (`COHERE_API_KEY`, `PINECONE_API_KEY`, `GROUND_TRUTH_PATH`) in the first cell.
+3. Execute the notebook cell by cell to evaluate the Semantic Graph Chunking method.
+
+#### Option 2: Running the Python Script
+1. Open the `semantic_graph_chunker.py` file and modify it to include your environment variables.
+2. Run the script using the following command:
+   ```bash
+   python semantic_graph_chunker.py
