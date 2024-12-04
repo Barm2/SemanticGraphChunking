@@ -1,80 +1,79 @@
 # Semantic Graph Chunking for RAG Pipelines
 
-Semantic Graph Chunking is an innovative method for chunking text data, designed to enhance the performance of Retrieval-Augmented Generation (RAG) pipelines. By leveraging graph-based techniques, this approach creates semantically meaningful chunks that improve information retrieval and downstream tasks.
+Semantic Graph Chunking is an innovative chunking method designed to improve document processing in Retrieval-Augmented Generation (RAG) pipelines. By leveraging graph-based approaches, this method creates semantically coherent chunks, enhancing the efficiency and accuracy of information retrieval and downstream tasks.
 
 ## Overview
 
-This repository contains the implementation of the Semantic Graph Chunking method. The pipeline includes:
+This repository implements the Semantic Graph Chunking method. The process includes:
+
 1. Splitting documents into sentences.
-2. Embedding sentences using a pretrained embedding model.
-3. Building a semantic similarity graph based on sentence embeddings.
-4. Detecting semantic communities using the Louvain algorithm.
-5. Generating coherent text chunks from identified communities.
+2. Embedding sentences using pretrained models.
+3. Constructing a semantic similarity graph based on embeddings.
+4. Identifying semantic communities using the Louvain algorithm.
+5. Generating coherent text chunks from the identified communities.
 
-This approach ensures that the created chunks maintain semantic coherence, which is critical for effective document segmentation and retrieval.
+This method is particularly useful in scenarios where semantic coherence is critical for document segmentation and retrieval.
 
-## Prerequisites
+## Requirements
 
-Before running the project, ensure you have:
-- A **Cohere API key**.
-- A **Pinecone API key**.
-- The ground truth file (`ground_truth.xlsx` provided in this repository).
-- Python 3.8+ installed.
-
-## Installation
-
-Clone this repository and install the required dependencies:
+To use this repository, install the required Python dependencies using the provided `requirements.txt` file:
 
 ```bash
-git clone <repository_url>
-cd <repository_name>
 pip install -r requirements.txt
 ```
----
-## Running the Project
 
-### Environment Setup
+### Dependencies
 
-1. **Set up API keys**:
-   - Obtain your API keys from [Cohere](https://cohere.ai) and [Pinecone](https://www.pinecone.io).
+Key libraries used in this project include:
 
-2. **Prepare the ground truth file**:
-   - Ensure the `ground_truth.xlsx` file is available in the repository or provide its absolute path.
+- PyTorch
+- Sentence Transformers
+- Pinecone
+- LangChain and its extensions
+- Cohere API
 
-3. **Configure environment variables**:
-   - Define the following variables in your script or notebook:
-     ```python
-     COHERE_API_KEY = "your-cohere-api-key"
-     PINECONE_API_KEY = "your-pinecone-api-key"
-     GROUND_TRUTH_PATH = "/path/to/ground_truth.xlsx"
-     ```
-
-### Execution
-
-#### Using the Jupyter Notebook:
-1. Open the `execute_evaluation.ipynb` file in your preferred Jupyter environment.
-2. Update the environment variables (`COHERE_API_KEY`, `PINECONE_API_KEY`, `GROUND_TRUTH_PATH`) in the first cell.
-3. Execute the notebook cell by cell to evaluate the Semantic Graph Chunking method.
-
-To review the implementation of Semantic Graph Chunker, Open the `semantic_graph_chunker.py` file
-
-1.  file and modify it to include your environment variables.
-2. Run the script using the following command:
-   ```bash
-   python semantic_graph_chunker.py
-   ```
-
-The script will process the input data using the Semantic Graph Chunking method and evaluate the results against the ground truth. The output will include metrics comparing the generated chunks to the ground truth data.
+For the complete list of dependencies, refer to the [`requirements.txt`](requirements.txt) file.
 
 ---
 
-## Repository Structure
+## How to Run the Project
 
-- **`semantic_graph_chunker.py`**: The main Python implementation of the Semantic Graph Chunking method.
-- **`execute_evaluation.ipynb`**: A Jupyter Notebook for demonstrating the chunking process and evaluating results.
+### Prerequisites
+
+Before running the project, ensure you have the following:
+
+1. A **Cohere API key**.
+2. A **Pinecone API key**.
+3. A **path to the ground truth file** (`ground_truth.xlsx` provided in this repository).
+
+### Instructions
+
+1. Clone the repository to your local machine.
+
+2. Install all the dependencies.
+
+3. Open the Jupyter Notebook `execute_evaluation.ipynb`.
+
+4. In the first cell, configure the following environment variables:
+   - `COHERE_API_KEY`: Your Cohere API key.
+   - `PINECONE_API_KEY`: Your Pinecone API key.
+   - `GROUND_TRUTH_PATH`: The path to the ground truth Excel file.
+
+5. Run the notebook cell-by-cell to evaluate the Semantic Graph Chunking method.
+
+### Example Configuration
+
+In the notebook:
+
+```python
+COHERE_API_KEY = "your-cohere-api-key"
+PINECONE_API_KEY = "your-pinecone-api-key"
+GROUND_TRUTH_PATH = "/path/to/ground_truth.xlsx"
+```
+
+## Project Files
+
+- **`semantic_graph_chunker.py`**: Contains the implementation of the Semantic Graph Chunking method.
+- **`execute_evaluation.ipynb`**: A Jupyter Notebook demonstrating how to use the chunker and evaluate its performance.
 - **`ground_truth.xlsx`**: The ground truth data used for evaluation.
-- **`requirements.txt`**: A file listing all dependencies required for this project.
-
----
-
-
+- **`requirements.txt`**: Lists the required dependencies.
