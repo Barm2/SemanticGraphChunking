@@ -51,13 +51,14 @@ pip install -r requirements.txt
 
 ### Execution
 
-#### Option 1: Using the Jupyter Notebook
+#### Using the Jupyter Notebook:
 1. Open the `execute_evaluation.ipynb` file in your preferred Jupyter environment.
 2. Update the environment variables (`COHERE_API_KEY`, `PINECONE_API_KEY`, `GROUND_TRUTH_PATH`) in the first cell.
 3. Execute the notebook cell by cell to evaluate the Semantic Graph Chunking method.
 
-#### Option 2: Running the Python Script
-1. Open the `semantic_graph_chunker.py` file and modify it to include your environment variables.
+To review the implementation of Semantic Graph Chunker, Open the `semantic_graph_chunker.py` file
+
+1.  file and modify it to include your environment variables.
 2. Run the script using the following command:
    ```bash
    python semantic_graph_chunker.py
