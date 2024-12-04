@@ -30,7 +30,7 @@ git clone <repository_url>
 cd <repository_name>
 pip install -r requirements.txt
 ```
-
+---
 ## Running the Project
 
 ### Environment Setup
@@ -62,4 +62,18 @@ pip install -r requirements.txt
    ```bash
    python semantic_graph_chunker.py
    ```
+
+The script will process the input data using the Semantic Graph Chunking method and evaluate the results against the ground truth. The output will include metrics comparing the generated chunks to the ground truth data.
+
+---
+
+## Repository Structure
+
+- **`semantic_graph_chunker.py`**: The main Python implementation of the Semantic Graph Chunking method.
+- **`execute_evaluation.ipynb`**: A Jupyter Notebook for demonstrating the chunking process and evaluating results.
+- **`ground_truth.xlsx`**: The ground truth data used for evaluation.
+- **`requirements.txt`**: A file listing all dependencies required for this project.
+
+---
+
 
